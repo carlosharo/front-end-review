@@ -1,0 +1,70 @@
+ .result div{
+  width: 100px;
+  height: 100px;
+  border: 1px solid gray;
+}
+
+.dropContainer span{
+  color: white;
+}
+
+.react-countdown-clock {
+  border: none !important;
+}
+
+section #drag1 {
+  width: 100px;
+  height: 100px;
+}
+
+.example button {
+  width: 200px;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background-color:#ffffff;
+  border-radius: 6px;
+	border:1px solid #dcdcdc;
+	display: block;
+  cursor: pointer;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12px;
+	padding: 6px 14px;
+  margin-top: 10px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+}
+
+.result .count {
+  font-size: 14px;
+  background-color: #272e35;
+  display: block;
+  color: white;
+  padding: 6px;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.local-storage {
+  background-color: #f8f9fb;
+  margin-bottom: 10px;
+}
+
+.session-storage, .dndContainer {
+  background-color: #f8f9fb;
+}
+
+.result span {
+  background-color: #e5edf5;
+  color: black;
+  display: block;
+  padding: 2px;
+}
+
+#div1 {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}

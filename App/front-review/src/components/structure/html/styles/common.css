@@ -1,0 +1,29 @@
+.example {
+  display: flex;
+  flex-direction: column;
+}
+
+.displayDefinition span {
+  margin-right: 5px;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.displayDefinition td {
+  vertical-align: baseline;
+  padding-left: 5%;
+}
+
+.code {
+  margin: 20px 10px;
+  background-color: #282d35;
+}
+
+.code img {
+  max-width: 75%;
+}
+
+.html5-introduction{
+  padding-bottom: 30px;
+}
