@@ -8,6 +8,8 @@ Describes how HTML elements are displayed on screen, is used to define styles fo
 
 [Selectors](#Selectors)
 
+[Attribute Selectors](#Attribute-Selectors)
+
 [Combinators](#Combinators)
 
 [Pseudo-classes](#Pseudo-classes)
@@ -61,8 +63,6 @@ Describes how HTML elements are displayed on screen, is used to define styles fo
 [Navigation Bar](#Navigation-Bar)
 
 [Image Sprites](#Image-Sprites)
-
-[Attribute Selectors](#Attribute-Selectors)
 
 [Rounded Corners](#Rounded-Corners)
 
@@ -130,12 +130,72 @@ Note: A class name cannot start with a number!
 }
 ```
 
+## **Attribute Selectors**
+It is possible to style HTML elements that have specific attributes or attribute values.
+
 * attribute: select an element based on the attribute value  
 Syntax : [attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]
+
 ```
 [attr] {
   text-align: center;
   color: red;
+}
+```
+
+selects all 'a' elements with a target attribute  
+
+```
+a[target] {
+  background-color: yellow;
+}
+```
+
+* [attribute="value"]  
+The [attribute="value"] selector is used to select elements with a specified attribute and value.
+```
+a[target="_blank"] {
+  background-color: yellow;
+}
+```
+
+* [attribute~="value"]  
+Is used to select elements with an attribute value containing a specified word.
+```
+[title~="flower"] {
+  border: 5px solid yellow;
+}
+```
+
+* [attribute|="value"]
+used to select elements with the specified attribute starting with the specified value.
+```
+[class|="top"] {
+  background: yellow;
+}
+```
+
+* [attribute^="value"]
+is used to select elements whose attribute value begins with a specified value.
+```
+[class^="top"] {
+  background: yellow;
+}
+```
+
+* [attribute$="value"]
+used to select elements whose attribute value ends with a specified value.
+```
+[class$="test"] {
+  background: yellow;
+}
+```
+
+* [attribute*="value"]
+used to select elements whose attribute value contains a specified value.
+```
+[class*="te"] {
+  background: yellow;
 }
 ```
 
@@ -557,8 +617,6 @@ border-top-color	     Sets the color of the top border
 border-top-style	     Sets the style of the top border  
 border-top-width	     Sets the width of the top border  
 border-width	         Sets the width of the four borders  
-
-</details>
 
 ## **Margins**
 
@@ -1053,9 +1111,6 @@ For zebra-striped tables, use the nth-child() selector and add a background-colo
 tr:nth-child(even) {background-color: #f2f2f2;}
 ```
 
-</details>
-
-
 ## **Display**
 
 The display property is the most important CSS property for controlling layout.
@@ -1088,11 +1143,11 @@ The display property is the most important CSS property for controlling layout.
   ```
 
 ## **Max-Width**
+
 Using max-width, will improve the browser's handling of small windows. This is important when making a site usable on small devices
 
-<details>
-  <summary>See more</summary>
   Example
+
   ```
   div.ex2 {
     max-width: 500px;
@@ -1101,19 +1156,14 @@ Using max-width, will improve the browser's handling of small windows. This is i
   }
   ```
 
-</details>
-
-
 ## **CSS Layout Property (position)**
+
 The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
 
-<details>
-  <summary>See more</summary>
-
-* static
+* static  
 An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page
 
-* relative
+* relative  
 Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
 ```
 div.relative {
@@ -1176,13 +1226,10 @@ img {
 }
 ```
 
-</details>
-
 ## **Overflow**
+
 The CSS overflow property controls what happens to content that is too big to fit into an area.
 
-<details>
-  <summary>See more</summary>
 The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
 
 visible - Default. The overflow is not clipped. The content renders outside the element's box  
@@ -1200,14 +1247,8 @@ div {
 }
 ```
 
-
-</details>
-
 ## **Float**
 The CSS float property specifies how an element should float.
-
-<details>
-  <summary>See more</summary>
 
   left - The element floats to the left of its container  
   right- The element floats to the right of its container  
@@ -1241,12 +1282,12 @@ The CSS float property specifies how an element should float.
   Use float with a list of hyperlinks to create a horizontal menu
   ```
   ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
 
 li {
   float: left;
@@ -1269,25 +1310,16 @@ li a:hover {
 }
 ```
 
-</details>
-
 ## **Inline Block**
 
-<details>
-  <summary>See Description</summary>
   display: inline-block allows to set a width and height on the element.
 
   with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
 
   Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.
 
-</details>
-
 ## **Align**
 CSS Layout - Horizontal & Vertical Align
-
-<details>
-  <summary>See more</summary>
 
   * Center align text  
   To just center the text inside an element, use text-align: center;
@@ -1302,10 +1334,10 @@ CSS Layout - Horizontal & Vertical Align
   To center an image, set left and right margin to auto and make it into a block element:
   ```
     img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
     }
   ```
 
@@ -1318,13 +1350,9 @@ CSS Layout - Horizontal & Vertical Align
   }
   ```
 
-</details>
-
 ## **Navigation Bar**
 Use position: 'sticky' to 'li' to create a sticky navbar.
 
-<details>
-  <summary>See more</summary>
   * Sticky Navigation
 
 ```
@@ -1352,13 +1380,10 @@ li a {
 }
 ```
 
-</details>
-
 ## **Image Sprites**
+
 An image sprite is a collection of images put into a single image.
 
-<details>
-  <summary>See more</summary>
   width, height: - Defines the portion of the image we want to use
   background: - Defines the background image and its position (left 0px, top 0px)  
 
@@ -1385,91 +1410,22 @@ An image sprite is a collection of images put into a single image.
   }
   ```
 
-</details>
-
-## **Attribute Selectors**
-It is possible to style HTML elements that have specific attributes or attribute values.
-
-<details>
-  <summary>See more</summary>
-selects all <a> elements with a target attribute  
-```
-a[target] {
-  background-color: yellow;
-}
-```
-
-* [attribute="value"]
-The [attribute="value"] selector is used to select elements with a specified attribute and value.
-```
-a[target="_blank"] {
-  background-color: yellow;
-}
-```
-
-* [attribute~="value"]
-Is used to select elements with an attribute value containing a specified word.
-```
-[title~="flower"] {
-  border: 5px solid yellow;
-}
-```
-
-* [attribute|="value"]
-used to select elements with the specified attribute starting with the specified value.
-```
-[class|="top"] {
-  background: yellow;
-}
-```
-
-* [attribute^="value"]
-is used to select elements whose attribute value begins with a specified value.
-```
-[class^="top"] {
-  background: yellow;
-}
-```
-
-* [attribute$="value"]
-used to select elements whose attribute value ends with a specified value.
-```
-[class$="test"] {
-  background: yellow;
-}
-```
-
-* [attribute*="value"]
-used to select elements whose attribute value contains a specified value.
-```
-[class*="te"] {
-  background: yellow;
-}
-```
-
-</details>
-
 ## **Rounded Corners**
+
 The CSS border-radius property defines the radius of an element's corners.
 
-<details>
-  <summary>See more</summary>
-  The border-radius property can have from one to four values
-  top-left, top-right, bottom-right, bottom-left
+  The border-radius property can have from one to four values  
+  top-left, top-right, bottom-right, bottom-left  
+
   ```
   #corners {
     border-radius: 15px 50px 30px 5px;
   }
   ```
 
-
-</details>
-
 ## **Tooltips**
-A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element:
 
-<details>
-  <summary>See more</summary>
+A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element:
 
   The tooltiptext class holds the actual tooltip text. It is hidden by default, and will be visible on hover.  
   CSS: The tooltip class use position:relative, which is needed to position the tooltip text (position:absolute).
@@ -1527,13 +1483,10 @@ A tooltip is often used to specify extra information about something when the us
 }
 ```
 
-</details>
-
 ## **Responsive Image**
+
 If you want an image to scale down if it has to, but never scale up to be larger than its original size, add the following:
 
-<details>
-  <summary>See more</summary>
 ```
 img {
   max-width: 100%;
@@ -1541,22 +1494,20 @@ img {
 }
 ```
 
-</details>
-
 ## **Variables**
+
 Variables in CSS should be declared within a CSS selector that defines its scope. For a global scope you can use either the :root or the body selector.
 
-<details>
-  <summary>See more</summary>
   * syntax
+
   ```
   var(custom-name, value)
   ```
 
   ```
   :root {
-  --main-bg-color: coral;
-}
+    --main-bg-color: coral;
+  }
 
 #div1 {
   background-color: var(--main-bg-color);
@@ -1567,14 +1518,9 @@ Variables in CSS should be declared within a CSS selector that defines its scope
 }
 ```
 
-
-</details>
-
 ## **Box Sizing**
 The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
 
-<details>
-  <summary>See more</summary>
   By default, the width and height of an element is calculated like this:
 
   width + padding + border = actual width of an element  
@@ -1584,12 +1530,12 @@ The CSS box-sizing property allows us to include the padding and border in an el
 
   ```
   .div2 {
-  width: 300px;
-  height: 100px;
-  padding: 50px;
-  border: 1px solid red;
-  box-sizing: border-box;
-}
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 1px solid red;
+    box-sizing: border-box;
+  }
 ```
 
 The code below ensures that all elements are sized in this more intuitive way
@@ -1599,15 +1545,13 @@ The code below ensures that all elements are sized in this more intuitive way
 }
 ```
 
-</details>
-
 ## **Flex Box**
+
 The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
 
-<details>
-  <summary>See more</summary>
-* Elements
+* Elements  
 To start using the Flexbox model, you need to first define a flex container.
+
 ```
 <div class="flex-container">
   <div>1</div>
@@ -1625,15 +1569,14 @@ The flex container becomes flexible by setting the display property to flex
 
 ### **The flex container properties are**
 
-<details>
-  <summary>See more</summary>
-
-* flex-direction
+* flex-direction  
 Defines in which direction the container wants to stack the flex items.
+
 - column
 - column-reverse
 - row
 - row-reverse
+
 ```
 .flex-container {
   display: flex;
@@ -1641,8 +1584,9 @@ Defines in which direction the container wants to stack the flex items.
 }
 ```
 
-* flex-wrap
+* flex-wrap  
 specifies whether the flex items should wrap or not
+
 - wrap
 - nowrap
 
@@ -1652,8 +1596,9 @@ specifies whether the flex items should wrap or not
   flex-wrap: wrap;
 }
 ```
-* flex-flow
+* flex-flow  
 shorthand property for setting both the flex-direction and flex-wrap
+
 ```
 .flex-container {
   display: flex;
@@ -1661,25 +1606,30 @@ shorthand property for setting both the flex-direction and flex-wrap
 }
 ```
 
-* justify-content
+* justify-content  
 Used to align the flex items
+
 - center
 - flex-start
 - flex-end
 - space-around
 - space-between
+
 ```.flex-container {
   display: flex;
   justify-content: center;
 }
 ```
-* align-items
+
+* align-items  
 used to align the flex items vertically.
+
 - center
 - flex-start
 - flex-end
 - stretch
 - baseline
+
 ```
 .flex-container {
   display: flex;
@@ -1688,14 +1638,16 @@ used to align the flex items vertically.
 }
 ```
 
-* align-content
+* align-content  
 used to align the flex lines with the flex-wrap property.
+
 - space-between
 - space-around
 - stretch
 - center
 - flex-start
 - flex-end
+
 ```
 .flex-container {
   display: flex;
@@ -1715,18 +1667,15 @@ Set both the justify-content and align-items properties to center
   align-items: center;
 }
 ```
-</details>
 
 ### **Child Elements**
 The direct child elements of a flex container automatically becomes flexible (flex) items.
 
-<details>
-  <summary>See more</summary>
-
   The flex item properties are:
 
-  * order
+  * order  
    specifies the order of the flex items.
+
    ```
    <div class="flex-container">
   <div style="order: 3">1</div>
@@ -1736,8 +1685,9 @@ The direct child elements of a flex container automatically becomes flexible (fl
   </div>
   ```
 
-  * flex-grow
+  * flex-grow  
    specifies how much a flex item will grow relative to the rest of the flex items.
+
    ```
    <div class="flex-container">
    <div style="flex-grow: 1">1</div>
@@ -1746,14 +1696,16 @@ The direct child elements of a flex container automatically becomes flexible (fl
    </div>
    ```
 
-  * flex-shrink
+  * flex-shrink  
   specifies how much a flex item will shrink relative to the rest of the flex items.
+
   ```
   <div style="flex-shrink: 0">3</div>
   ```
 
-  * flex-basis
+  * flex-basis  
   specifies the initial length of a flex item.
+
   ```
   <div style="flex-basis: 200px">3</div>
   ```
@@ -1761,25 +1713,21 @@ The direct child elements of a flex container automatically becomes flexible (fl
   * flex
   shorthand property for the flex-grow, flex-shrink, and flex-basis  
   Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels
+
   ```
   <div style="flex: 0 0 200px">3</div>
   ```
 
   * align-self
   specifies the alignment for the selected item inside the flexible container.  
+
   ```
   <div style="align-self: center">3</div>
   ```
 
-</details>
-
-</details>
-
 ## **Media Queries**
 The @media rule, introduced in CSS2, made it possible to define different style rules for different media types.
 
-<details>
-  <summary>See more</summary>
   When a media query is true, the corresponding style sheet or style rules are applied, following the normal cascading rules.
 
 * Syntax
@@ -1805,11 +1753,9 @@ The @media rule, introduced in CSS2, made it possible to define different style 
 }
 ```
 
-</details>
-
 # CSS Pre-Processors
 
-** Advantages **
+**Advantages**
 
 * Save time
 
@@ -1825,15 +1771,21 @@ CSS on its own can be fun, but stylesheets are getting larger, more complex, and
 
 Sass lets you use features that don't exist in CSS yet like variables, nesting, mixins, inheritance and other nifty goodies that make writing CSS fun again.
 
-[Variables](#Variables)
+[Variable](#Variable)
+
 [Nesting](#Nesting)
+
 [Partials](#Partials)
+
 [Import](#Import)
+
 [Mixins](#Mixins)
+
 [Extend/Inheritance](#Extend/Inheritance)
+
 [Operators](#Operators)
 
-## Variables
+## Variable
 
 You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the $ symbol to make something a variable.
 
