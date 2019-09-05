@@ -16,6 +16,8 @@ Describes how HTML elements are displayed on screen, is used to define styles fo
 
 [Pseudo-Elements](#Pseudo-Elements)
 
+[CSS Units](#CSS-Units)
+
 [Comments](#Comments)
 
 [Insert CSS](#Insert-CSS)
@@ -347,6 +349,61 @@ h1, h2, p {
   color: red;
 }
 ```
+
+## **CSS Units**
+
+There are two types of lengths used in CSS — relative and absolute.
+
+**Absolute length units**
+
+The following are all absolute length units — they are not relative to anything else and are generally considered to always be the same size.
+
+<table >
+ <thead>
+  <tr>
+   <th scope="col">Unit</th>
+   <th scope="col">Name</th>
+   <th scope="col">Equivalent to</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>cm</code></td>
+   <td>Centimeters</td>
+   <td>1cm = 96px/2.54</td>
+  </tr>
+  <tr>
+   <td><code>mm</code></td>
+   <td>Millimeters</td>
+   <td>1mm = 1/10th of 1cm</td>
+  </tr>
+  <tr>
+   <td><code>Q</code></td>
+   <td>Quarter-millimeters</td>
+   <td>1Q = 1/40th of 1cm</td>
+  </tr>
+  <tr>
+   <td><code>in</code></td>
+   <td>Inches</td>
+   <td>1in = 2.54cm = 96px</td>
+  </tr>
+  <tr>
+   <td><code>pc</code></td>
+   <td>Picas</td>
+   <td>1pc = 1/16th of 1in</td>
+  </tr>
+  <tr>
+   <td><code>pt</code></td>
+   <td>Points</td>
+   <td>1pt = 1/72th of 1in</td>
+  </tr>
+  <tr>
+   <td><code>px</code></td>
+   <td>Pixels</td>
+   <td>1px = 1/96th of 1in</td>
+  </tr>
+ </tbody>
+</table>
 
 ## **Comments**
 
