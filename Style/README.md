@@ -1,8 +1,5 @@
 # CSS3 - Review
 
-<details>
-  <summary>See more</summary>
-
 ## **Introduction**
 CSS: stands for Cascading Style Sheets.
 Describes how HTML elements are displayed on screen, is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
@@ -1876,10 +1873,17 @@ The @media rule, introduced in CSS2, made it possible to define different style 
 
 </details>
 
-# SASS - Review
+# CSS Pre-Processors
 
-<details>
-  <summary>See more</summary>
+** Advantages **
+
+* Save time
+
+* Easy maintenance
+
+* Reuse code
+
+## SASS
 
 ## **Introduction**
 
@@ -2009,8 +2013,7 @@ You can even pass in values to make your mixin more flexible. A good use of a mi
 
 ## Extend/Inheritance
 
-
-
 ## Operators
 
-</details>
+## Others
+less & stylus
