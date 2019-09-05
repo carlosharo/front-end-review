@@ -358,7 +358,7 @@ There are two types of lengths used in CSS — relative and absolute.
 
 The following are all absolute length units — they are not relative to anything else and are generally considered to always be the same size.
 
-<table >
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Unit</th>
@@ -401,6 +401,55 @@ The following are all absolute length units — they are not relative to anythin
    <td><code>px</code></td>
    <td>Pixels</td>
    <td>1px = 1/96th of 1in</td>
+  </tr>
+ </tbody>
+</table>
+
+Most of these values are more useful when used for print, rather than screen output. For example we don't typically use cm (centimeters) on screen. The only value that you will commonly use is px (pixels).
+
+**Relative length units**
+
+Relative length units are relative to something else, perhaps the size of the parent element's font, or the size of the viewport.
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Unit</th>
+   <th scope="col">Relative to</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>em</code></td>
+   <td>Font size of the parent element.</td>
+  </tr>
+  <tr>
+   <td><code>ex</code></td>
+   <td>x-height of the element's font.</td>
+  </tr>
+  <tr>
+   <td><code>rem</code></td>
+   <td>Font size of the root element.</td>
+  </tr>
+  <tr>
+   <td><code>lh</code></td>
+   <td>Line height of the element.</td>
+  </tr>
+  <tr>
+   <td><code>vw</code></td>
+   <td>1% of the viewport's width.</td>
+  </tr>
+  <tr>
+   <td><code>vh</code></td>
+   <td>1% of the viewport's height.</td>
+  </tr>
+  <tr>
+   <td><code>vmin</code></td>
+   <td>1% of the viewport's smaller dimension.</td>
+  </tr>
+  <tr>
+   <td><code>vmax</code></td>
+   <td>1% of the viewport's larger dimension.</td>
   </tr>
  </tbody>
 </table>
