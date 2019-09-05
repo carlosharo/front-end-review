@@ -141,7 +141,7 @@ Syntax : [attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=va
 
 * universal * : se aplica a todos los elementos del documento
 
-## **Combinator**
+## **Combinators**
 
 A CSS selector can contain more than one simple selector
 
@@ -185,7 +185,7 @@ A CSS selector can contain more than one simple selector
   ```
 
   ## **Pseudo-classes**
-  A pseudo-class is used to define a special state of an element.
+  Pseudo-classes allow the selection of elements based on state information that is not contained in the document tree.  
 
     it can be used to:
 
@@ -301,9 +301,6 @@ comment */
 ## **Insert CSS**
 Three Ways to Insert CSS
 
-<details>
-  <summary>See more</summary>
-
 * External style sheet: change the look of an entire website by changing just one file
 ```
 <head>
@@ -358,15 +355,10 @@ Result: external color
 2. External and internal style sheets (in the head section)
 3. Browser default
 
-</details>
-
 ## **Colors**
 Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.
 In HTML, a color can be specified by using a color name:
 Tomato, orange, gray, slateblue, violet, lightgray, mediumseagreen
-
-<details>
-  <summary>See more</summary>
 
 * Background color
 ```
@@ -405,13 +397,7 @@ The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not tra
 transparent
 rgba(255, 99, 71, 0.5)
 
-</details>
-
-
 ## **CSS Background**
-
-<details>
-  <summary>See more</summary>
 
 * background-color : specifies the background color of an element.
 ```
@@ -426,42 +412,40 @@ body {
   background-image: url("gradient_bg.png");
 }
 ```
-* background-repeat
-repeat horizontal: background-repeat: repeat-x;
-repeat vertical: background-repeat: repeat-y;
-no repeat: background-repeat: no-repeat;
+* background-repeat  
+repeat horizontal: background-repeat: repeat-x;  
+repeat vertical: background-repeat: repeat-y;  
+no repeat: background-repeat: no-repeat;  
 
-* background-position
-position: background-position: right top;
+* background-position  
+position: background-position: right top;  
 
-* background-attachment
+* background-attachment  
 To specify that the background image should be fixed (will not scroll with the rest of the page)  
-background-attachment: fixed;
+background-attachment: fixed;  
 
-* painting-area
-Specifies the painting area of the background
-background-clip: padding-box;
+* painting-area  
+Specifies the painting area of the background  
+background-clip: padding-box;  
 
-* origin
-Specifies where the background image(s) is/are positioned
-background-origin: content-box;
+* origin  
+Specifies where the background image(s) is/are positioned  
+background-origin: content-box;  
 
-* size
-Specifies the size of the background image(s)
-background-size: auto;
-background-size: 300px 100px;
+* size  
+Specifies the size of the background image(s)  
+background-size: auto;  
+background-size: 300px 100px;  
 
-* Short code
-To shorten the code, it is also possible to specify all the background properties in one single property.
+* Short code  
+To shorten the code, it is also possible to specify all the background properties in one single property.  
 The order is:  
-color, image, repeat, attachment, position
+color, image, repeat, attachment, position  
 ```
 body {
   background: #ffffff url("img_tree.png") no-repeat right top;
 }
 ```
-
-</details>
 
 ## **Borders**
 The CSS border properties allow you to specify the style, width, and color of an element's border.
