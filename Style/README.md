@@ -185,7 +185,8 @@ A CSS selector can contain more than one simple selector
   ```
 
   ## **Pseudo-classes**
-  Pseudo-classes allow the selection of elements based on state information that is not contained in the document tree.  
+
+    Pseudo-classes allow the selection of elements based on state information that is not contained in the document tree.  
 
     it can be used to:
 
@@ -448,10 +449,8 @@ body {
 ```
 
 ## **Borders**
-The CSS border properties allow you to specify the style, width, and color of an element's border.
 
-<details>
-  <summary>See more</summary>
+The CSS border properties allow you to specify the style, width, and color of an element's border.
 
 * Border Style
 
@@ -459,16 +458,16 @@ The border-style property specifies what kind of border to display.
 
 The following values are allowed:
 
-dotted - Defines a dotted border
-dashed - Defines a dashed border
-solid - Defines a solid border
-double - Defines a double border
+dotted - Defines a dotted border  
+dashed - Defines a dashed border  
+solid - Defines a solid border  
+double - Defines a double border  
 groove - Defines a 3D grooved border. The effect depends on the border-color value
-ridge - Defines a 3D ridged border. The effect depends on the border-color value
-inset - Defines a 3D inset border. The effect depends on the border-color value
-outset - Defines a 3D outset border. The effect depends on the border-color value
-none - Defines no border
-hidden - Defines a hidden border
+ridge - Defines a 3D ridged border. The effect depends on the border-color value  
+inset - Defines a 3D inset border. The effect depends on the border-color value  
+outset - Defines a 3D outset border. The effect depends on the border-color value  
+none - Defines no border  
+hidden - Defines a hidden border  
 
 The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).
 
@@ -482,9 +481,9 @@ p.double {border-style: double;}
 
 * Border width
 
-The border-width property specifies the width of the four borders.
-The width can be set as a specific size (in px, pt, cm, em, etc)
-The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border).
+The border-width property specifies the width of the four borders.  
+The width can be set as a specific size (in px, pt, cm, em, etc)  
+The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border).  
 
 ```
 p.one {
@@ -495,7 +494,7 @@ p.one {
 
 * Border Color
 
-The border-color property is used to set the color of the four borders.
+The border-color property is used to set the color of the four borders.  
 The border-color property can have from one to four values (for the top border, right border, bottom border, and the left border).
 
 ```
@@ -537,37 +536,36 @@ p {
 
 * All css border properties
 
-border	               Sets all the border properties in one declaration
-border-bottom	         Sets all the bottom border properties in one declaration
-border-bottom-color	   Sets the color of the bottom border
-border-bottom-style	   Sets the style of the bottom border
-border-bottom-width	   Sets the width of the bottom border
-border-color	         Sets the color of the four borders
-border-left	           Sets all the left border properties in one declaration
-border-left-color	     Sets the color of the left border
-border-left-style	     Sets the style of the left border
-border-left-width	     Sets the width of the left border
-border-radius	         Sets all the four border-radius properties for rounded corners
-border-right	         Sets all the right border properties in one declaration
-border-right-color	   Sets the color of the right border
-border-right-style	   Sets the style of the right border
-border-right-width	   Sets the width of the right border
-border-style	         Sets the style of the four borders
-border-top	           Sets all the top border properties in one declaration
-border-top-color	     Sets the color of the top border
-border-top-style	     Sets the style of the top border
-border-top-width	     Sets the width of the top border
-border-width	         Sets the width of the four borders
+border	               Sets all the border properties in one declaration  
+border-bottom	         Sets all the bottom border properties in one declaration  
+border-bottom-color	   Sets the color of the bottom border  
+border-bottom-style	   Sets the style of the bottom border  
+border-bottom-width	   Sets the width of the bottom border  
+border-color	         Sets the color of the four borders  
+border-left	           Sets all the left border properties in one declaration  
+border-left-color	     Sets the color of the left border  
+border-left-style	     Sets the style of the left border  
+border-left-width	     Sets the width of the left border  
+border-radius	         Sets all the four border-radius properties for rounded corners  
+border-right	         Sets all the right border properties in one declaration  
+border-right-color	   Sets the color of the right border  
+border-right-style	   Sets the style of the right border  
+border-right-width	   Sets the width of the right border  
+border-style	         Sets the style of the four borders  
+border-top	           Sets all the top border properties in one declaration  
+border-top-color	     Sets the color of the top border  
+border-top-style	     Sets the style of the top border  
+border-top-width	     Sets the width of the top border  
+border-width	         Sets the width of the four borders  
 
 </details>
 
 ## **Margins**
+
 The CSS margin properties are used to create space around elements, outside of any defined borders.
 
-<details>
-  <summary>See more</summary>
+**individual sides**
 
-* individual sides
 - margin-top
 - margin-right
 - margin-bottom
@@ -603,7 +601,7 @@ p {
 }
 ```
 
-* auto value
+* auto value  
 You can set the margin property to auto to horizontally center the element within its container.
 ```
 div {
@@ -613,7 +611,7 @@ div {
 }
 ```
 
-* margin collapse
+* margin collapse  
 Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
 
 h1 { margin: 0 0 50px 0; }  
@@ -621,13 +619,8 @@ h2 { margin: 20px 0 0 0; }
 
 margin would be a total of 70px (50px + 20px). But due to margin collapse, the actual margin ends up being 50px.
 
-</details>
-
 ## **Paddings**
 The CSS padding properties are used to generate space around an element's content, inside of any defined borders.
-
-<details>
-  <summary>See more</summary>
 
 * Individual sides
 
@@ -676,13 +669,10 @@ div {
 }
 ```
 
-</details>
-
 ## **Height / Width**
+
 The height and width properties are used to set the height and width of an element.
 
-<details>
-  <summary>See more</summary>
 
   * Height / Width
 
@@ -698,34 +688,32 @@ div {
 
 Note: The height and width properties do not include padding, borders, or margins; they set the height/width of the area inside the padding, border, and margin of the element!
 
-* max-width
+* max-width  
 The max-width property is used to set the maximum width of an element.
 
 Note: The value of the max-width property overrides width.
 
 * All dimension Properties
-height	     Sets the height of an element
-max-height	 Sets the maximum height of an element
-max-width	   Sets the maximum width of an element
-min-height	 Sets the minimum height of an element
-min-width	   Sets the minimum width of an element
-width	       Sets the width of an element
 
-</details>
+height	     Sets the height of an element  
+max-height	 Sets the maximum height of an element  
+max-width	   Sets the maximum width of an element  
+min-height	 Sets the minimum height of an element  
+min-width	   Sets the minimum width of an element  
+width	       Sets the width of an element  
 
 ## **Box Model**
+
 In CSS, the term "box model" is used when talking about design and layout.  
 It consists of: margins, borders, padding, and the actual content.  
 The box model allows us to add a border around elements, and to define space between elements.
 
-<details>
-  <summary>See more</summary>
   Explanation of the different parts:
 
-  Content - The content of the box, where text and images appear
-  Padding - Clears an area around the content. The padding is transparent
-  Border - A border that goes around the padding and content
-  Margin - Clears an area outside the border. The margin is transparent
+  Content - The content of the box, where text and images appear  
+  Padding - Clears an area around the content. The padding is transparent  
+  Border - A border that goes around the padding and content  
+  Margin - Clears an area outside the border. The margin is transparent  
 
   ```
     div {
@@ -741,14 +729,10 @@ The box model allows us to add a border around elements, and to define space bet
   The total width of an element should be calculated like this:  
   Total element width = width + left padding + right padding + left border + right border + left margin + right margin
 
-</details>
-
 
 ## **Outline**
-An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out"  
 
-<details>
-  <summary>See more</summary>
+An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out"  
 
   CSS has the following outline properties:
 
@@ -759,24 +743,19 @@ An outline is a line that is drawn around elements, OUTSIDE the borders, to make
   * outline:  is a shorthand property for setting width, style, color
   ```
   p.ex1 {
-  border: 1px solid black;
-  outline-style: solid;
-  outline-color: red;
-  outline-width: medium;
-  outline-offset: 15px;
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: red;
+    outline-width: medium;
+    outline-offset: 15px;
   }
 
   p.ex2 {outline: 5px solid yellow;}
   ```
 
-</details>
-
-
 ## **Text**
-Text formatting
 
-<details>
-  <summary>See more</summary>
+Text formatting
 
 * Text color
 The color property is used to set the color of the text.  
@@ -792,16 +771,15 @@ h1 { text-align: center; }
 ```
 text-align: justify; is stretched so that every line has equal width.
 
-
 * Text decoration
 used to set or remove decorations from text  
 
 text-decoration: none; is often used to remove underlines from links
 
 The other text-decoration values are used to decorate text:
-  text-decoration: overline;
-  text-decoration: line-through;
-  text-decoration: underline;
+  text-decoration: overline;  
+  text-decoration: line-through;  
+  text-decoration: underline;  
 
 * Text Transformation
 Used to specify uppercase and lowercase letters in a text  
@@ -848,16 +826,11 @@ img.a {
 }
 ```
 
-</details>
-
-
 ## **Fonts**
+
 The font-family property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font, and so on.
 
 Note: If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman".
-
-<details>
-  <summary>See more</summary
 
 * Font family
 
@@ -938,14 +911,9 @@ p.a {
 }
 ```
 
-</details>
-
-
 ## **links**
-links can be styled differently depending on what state they are in.
 
-<details>
-  <summary>See more</summary>
+links can be styled differently depending on what state they are in.
 
   The four links states are:  
 
@@ -971,10 +939,8 @@ a:hover, a:active {
 }
 ```
 
-</details>
-
-
 ## **Lists**
+
 The CSS list properties allow you to:
 
 Set different list item markers for ordered lists  
@@ -982,8 +948,6 @@ Set different list item markers for unordered lists
 Set an image as the list item marker  
 Add background colors to lists and list items  
 
-<details>
-  <summary>See more</summary>
 * Markers
 The list-style-type property specifies the type of list item marker.
 
@@ -1016,7 +980,7 @@ ul.b {
 * Remove defaults
 
 The list-style-type:none property can also be used to remove the markers/bullets.  
-Note that the list also has default margin and padding. To remove this, add margin:0 and padding:0 to <ul> or <ol>  
+Note that the list also has default margin and padding. To remove this, add margin:0 and padding:0 to 'ul' or 'ol'  
 
 * Shorthand
 The list-style property is a shorthand property. It is used to set all the list properties in one declaration:
@@ -1026,14 +990,9 @@ ul {
 }
 ```
 
-</details>
-
-
 ## **Tables**
-The look of an HTML table can be greatly improved with CSS
 
-<details>
-  <summary>See more</summary>
+The look of an HTML table can be greatly improved with CSS
 
 * Borders
 To specify table borders in CSS, use the border property.
@@ -1098,23 +1057,22 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 
 ## **Display**
+
 The display property is the most important CSS property for controlling layout.
 
-<details>
-  <summary>See more</summary>
   The display property specifies if/how an element is displayed.
 
   Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
 
-  * Block-level Elements
+  * Block-level Elements  
   A block-level element always starts on a new line and takes up the full width available.
 
-  <div>,<h1> - <h6>,<p>,<form>,<header>,<footer>,<section>
+  'div','h1' - 'h6','p','form','header','footer','section'
 
   * Inline Elements
   An inline element does not start on a new line and only takes up as much width as necessary.
 
-  <span>, <a>, <img>
+  'span', 'a', 'img'
 
   * Display none
   display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them
@@ -1128,9 +1086,6 @@ The display property is the most important CSS property for controlling layout.
     display: block;
   }
   ```
-
-</details>
-
 
 ## **Max-Width**
 Using max-width, will improve the browser's handling of small windows. This is important when making a site usable on small devices
