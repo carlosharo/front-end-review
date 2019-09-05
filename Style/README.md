@@ -4,9 +4,15 @@
 CSS: stands for Cascading Style Sheets.
 Describes how HTML elements are displayed on screen, is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
 
-[syntax](#syntax)
+[Syntax](#Syntax)
 
 [Selectors](#Selectors)
+
+[Combinators](#Combinators)
+
+[Pseudo-classes](#Pseudo-classes)
+
+[Pseudo-Elements](#Pseudo-Elements)
 
 [Comments](#Comments)
 
@@ -52,12 +58,6 @@ Describes how HTML elements are displayed on screen, is used to define styles fo
 
 [Align](#Align)
 
-[Combinators](#Combinators)
-
-[Pseudo-classes](#Pseudo-classes)
-
-[Pseudo-Elements](#Pseudo-Elements)
-
 [Navigation Bar](#Navigation-Bar)
 
 [Image Sprites](#Image-Sprites)
@@ -78,7 +78,7 @@ Describes how HTML elements are displayed on screen, is used to define styles fo
 
 [Media Queries](#Media-Queries)
 
-## **syntax**
+## **Syntax**
 A CSS rule-set consists of a selector and a declaration block:
 ```
 h1        {property: value; property: value}
@@ -99,11 +99,10 @@ p {
 ## **Selectors**
 CSS selectors are used to "find" (or select) HTML elements based on their element name, id, class, attribute, and more.
 
-<details>
-  <summary>See more</summary>
+**Simple selectors**
 
-* name: selects elements based on the element name.
-All <p> elements on a page will be center-aligned, with a red text color.
+* tag name: selects elements based on the element name.
+All 'p' elements on a page will be center-aligned, with a red text color.
 ```
 p {
   text-align: center;
@@ -115,7 +114,7 @@ p {
 The id of an element should be unique within a page
 Write a hash (#) character, followed by the id of the element.
 ```
-#para1 {
+#id {
   text-align: center;
   color: red;
 }
@@ -131,14 +130,154 @@ Note: A class name cannot start with a number!
 }
 ```
 
+* attribute: select an element based on the attribute value  
+Syntax : [attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]
+```
+[attr] {
+  text-align: center;
+  color: red;
+}
+```
+
+* universal * : se aplica a todos los elementos del documento
+
+## **Combinator**
+
+A CSS selector can contain more than one simple selector
+
+  There are four different combinators in CSS:
+
+  * Descendant selector (space)
+  The descendant selector matches all elements that are descendants of a specified element.
+
+  selects all <p> elements inside <div> elements
+
+  ```
+  div p {
+    background-color: yellow;
+  }
+  ```
+
+  * child selector (>)
+  The child selector selects all elements that are the immediate children of a specified element.
+
+  selects all <p> elements that are immediate children of a <div> element:
+  ```
+  div > p {
+    background-color: yellow;
+  }
+  ```
+
+  * Adjacent sibling selector (+)
+  selects all elements that are the adjacent siblings of a specified element.
+  ```
+  div + p {
+  background-color: yellow;
+  }
+  ```
+
+  * General sibling selector (~)
+  selects all elements that are siblings of a specified element.
+  ```
+  div ~ p {
+    background-color: yellow;
+  }
+  ```
+
+  ## **Pseudo-classes**
+  A pseudo-class is used to define a special state of an element.
+
+    it can be used to:
+
+    Style an element when a user mouses over it  
+    Style visited and unvisited links differently  
+    Style an element when it gets focus  
+
+    * syntax
+    ```
+    selector:pseudo-class {
+      property:value;
+    }
+    ```
+
+    * Hover on div
+    ```
+    div:hover {
+      background-color: blue;
+    }
+    ```
+
+    * Match the first 'p' element
+    ```
+    p:first-child {
+      color: blue;
+    }
+    ```
+
+  ## **Pseudo-Elements**
+  A CSS pseudo-element is used to style specified parts of an element.
+
+    it can be used to:
+
+   Style the first letter, or line, of an element  
+   Insert content before, or after, the content of an element  
+
+   * Syntax
+   ```
+   selector::pseudo-element {
+     property:value;
+   }
+  ```
+
+  * ::first-line  
+  The ::first-line pseudo-element is used to add a special style to the first line of a text.
+
+  ```
+  p::first-line {
+    color: #ff0000;
+    font-variant: small-caps;
+  }
+  ```
+
+  * ::first-letter  
+  used to add a special style to the first letter of a text.
+  ```
+  p::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+  }
+  ```
+
+  * ::before  
+  used to insert some content before the content of an element.
+  ```
+  h1::before {
+    content: url(smiley.gif);
+  }
+  ```
+
+  * ::after
+  ```
+  h1::after {
+    content: url(smiley.gif);
+  }
+  ```
+
+  * ::selection  
+  matches the portion of an element that is selected by a user
+  ```
+  ::selection {
+    color: red;
+    background: yellow;
+  }
+  ```
+
 * more than one class:
 ```
 <p class="center large"></p>
 p.center {text-align: center}
 p.large {font-size: 300%}
 ```
-
-* name & ClassName: p.center {}
 
 * Grouping selectors: To group selectors, separate each selector with a comma.
 ```
@@ -147,8 +286,6 @@ h1, h2, p {
   color: red;
 }
 ```
-
-</details>
 
 ## **Comments**
 
@@ -1241,148 +1378,6 @@ CSS Layout - Horizontal & Vertical Align
     text-align: center;
   }
   ```
-
-</details>
-
-## **Combinators**
-A CSS selector can contain more than one simple selector
-
-<details>
-  <summary>See more</summary>
-  There are four different combinators in CSS:
-
-  * Descendant selector (space)
-  The descendant selector matches all elements that are descendants of a specified element.
-
-  selects all <p> elements inside <div> elements
-
-  ```
-  div p {
-    background-color: yellow;
-  }
-  ```
-
-  * child selector (>)
-  The child selector selects all elements that are the immediate children of a specified element.
-
-  selects all <p> elements that are immediate children of a <div> element:
-  ```
-  div > p {
-    background-color: yellow;
-  }
-  ```
-
-  * Adjacent sibling selector (+)
-  selects all elements that are the adjacent siblings of a specified element.
-  ```
-  div + p {
-  background-color: yellow;
-  }
-  ```
-
-  * General sibling selector (~)
-  selects all elements that are siblings of a specified element.
-  ```
-  div ~ p {
-    background-color: yellow;
-  }
-  ```
-
-</details>
-
-## **Pseudo-classes**
-A pseudo-class is used to define a special state of an element.
-
-<details>
-  <summary>See more</summary>
-  it can be used to:
-
-  Style an element when a user mouses over it  
-  Style visited and unvisited links differently  
-  Style an element when it gets focus  
-
-  * syntax
-  ```
-  selector:pseudo-class {
-    property:value;
-  }
-  ```
-
-  * Hover on div
-  ```
-  div:hover {
-    background-color: blue;
-  }
-  ```
-
-  * Match the first <p> element
-  ```
-  p:first-child {
-    color: blue;
-  }
-  ```
-
-</details>
-
-## **Pseudo-Elements**
-A CSS pseudo-element is used to style specified parts of an element.
-
-<details>
-  <summary>See more</summary>
-  it can be used to:
-
- Style the first letter, or line, of an element  
- Insert content before, or after, the content of an element  
-
- * Syntax
- ```
- selector::pseudo-element {
-   property:value;
- }
-```
-
-* ::first-line
-The ::first-line pseudo-element is used to add a special style to the first line of a text.
-
-```
-p::first-line {
-  color: #ff0000;
-  font-variant: small-caps;
-}
-```
-
-* ::first-letter
-used to add a special style to the first letter of a text.
-```
-p::first-letter {
-  color: #ff0000;
-  font-size: xx-large;
-}
-```
-
-* ::before
-used to insert some content before the content of an element.
-```
-h1::before {
-  content: url(smiley.gif);
-}
-```
-
-* ::after
-```
-h1::after {
-  content: url(smiley.gif);
-}
-```
-
-* ::selection
-matches the portion of an element that is selected by a user
-```
-::selection {
-  color: red;
-  background: yellow;
-}
-```
 
 </details>
 
