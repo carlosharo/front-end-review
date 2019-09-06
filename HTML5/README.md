@@ -3,7 +3,13 @@
 ## HTML5 is the latest evolution of the standard that defines HTML.
 The term represents two different concepts. It is a new version of the language HTML, with new elements, attributes, and behaviors, and a larger set of technologies that allows the building of more diverse and powerful Web sites and applications.
 
-* Document summary
+[Document summary](#Document summary)
+
+[Document information](#Document information)
+
+[Document structure](#Document structure)
+
+## **Document summary**
 
 **html:** Beginning and end of and HTML document.  
 **head:** Contains information that specific the page(tags, meta data, links to scripts and styles).  
@@ -21,7 +27,7 @@ The term represents two different concepts. It is a new version of the language 
 </html>
 ```
 
-* Document information
+## **Document information**
 
 **base :** The base URL is useful for specifying all relative links in a document.  
 **meta :** Meta data spells out additional information about the page () description, author, published date, keyword).  
@@ -47,8 +53,7 @@ The term represents two different concepts. It is a new version of the language 
 </html>
 ```
 
-(see App for live examples)
-* Document structure
+## **Document structure**
 
 **h1 to h6 :** 'All six leaves of Headings, with 1 being the most important on a page and 6 being the least. These elements are used to describe content sections on a page.'  
 **span :** 'An inline section or block container, typically used for grouping styling elements'  
@@ -71,7 +76,22 @@ The term represents two different concepts. It is a new version of the language 
   </p>
 </div>
 ```
-* Text + formatting
+
+<div className="result">
+  <h3> Lorem ipsum </h3>
+  <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+  Pellentesque volutpat congue velit. <br />
+  Ut maximus diam at nunc auctor, id rutrum nisl tincidunt. <br />
+  <hr />
+  Cras sed erat sed risus fringilla sagittis. <br />
+  Maecenas <span>quis arcu turpis.</span> <br />
+  In pellentesque eget augue nec lacinia. <br />
+  Phasellus vel justo volutpat, sollicitudin purus et, volutpat felis. <br />
+  </p>
+</div>
+
+## **Text + formatting**
 
 **strong :** 'Indicates STROG emphasis, displayed bold in most browsers'  
 **b :** 'Another way to create bold text, it is more for drawing attention'  
