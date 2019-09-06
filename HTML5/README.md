@@ -13,6 +13,12 @@ The term represents two different concepts. It is a new version of the language 
 
 [Links formatting](#Links formatting)
 
+[HTML5 New Tags](#HTML5 New Tags)
+
+[HTML5 Input Types](#HTML5 Input Types)
+
+[graphic elements](#graphic elements)
+
 ## **Document summary**
 
 **html:** Beginning and end of and HTML document.  
@@ -161,25 +167,27 @@ The term represents two different concepts. It is a new version of the language 
 **name:** 'An anchor thats useful for bringing users to specific document elements'  
 #name: 'An anchor link that brings users specifically to a div element'  
 
+**Code example**
 ```
 <div className="result">
 
-  <a href="example">hyperlink </a> {html5.href} <br/>
-  <a href="mailto:">mailto</a> {html5.mailto} <br/>
-  <a href="tel://###-###">tel</a> {html5.tel} <br/>
-  <a href="name">name</a> {html5.name} <br/>
-  <a href="#structure">Document structure</a> {html5.tagname} <br/>
+  <a href="example">hyperlink </a> <br/>
+  <a href="mailto:">mailto</a> <br/>
+  <a href="tel://###-###">tel</a> <br/>
+  <a href="name">name</a> <br/>
+  <a href="#structure">Document structure</a> <br/>
 
 </div>
 ```
 
+**View**
 <div className="result">
 
-  <a href="example">hyperlink </a> {html5.href} <br/>
-  <a href="mailto:">mailto</a> {html5.mailto} <br/>
-  <a href="tel://###-###">tel</a> {html5.tel} <br/>
-  <a href="name">name</a> {html5.name} <br/>
-  <a href="#structure">Document structure</a> {html5.tagname} <br/>
+  <a href="example">hyperlink </a> <br/>
+  <a href="mailto:">mailto</a> <br/>
+  <a href="tel:">tel</a> <br/>
+  <a href="name">name</a> <br/>
+  <a href="#structure">Document structure</a> <br/>
 
 </div>
 
@@ -188,7 +196,8 @@ The term represents two different concepts. It is a new version of the language 
 * Forms
 * Tables
 * Objects & iFrames
-* HTML5 New Tags
+
+## **HTML5 New Tags**
 
 #### Semantic elements:
 A semantic element clearly describes its meaning to both the browser and the developer.  
@@ -208,20 +217,22 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
 **summary:** 'Contains a visible heading for a 'details' element'  
 **time:** 'Identifies the time and date'  
 
-#### HTML5 Input Types
-**number:** 'defines a numeric input field. You can also set restrictions on what numbers are accepted',
-**date:** 'is used for input fields that should contain a date',
-**time:** 'allows the user to select a time (no time zone)',
-**range:** 'defines a control for entering a number whose exact value is not important. Default range is 0 to 100. You can set restrictions on what numbers are accepted with the min, max, and step attributes:',
-**color:** 'is used for input fields that should contain a color. Depending on browser support, a color picker can show up in the input field.',
-**email:** 'the e-mail address can be automatically validated when submitted. Some smartphones recognize the email type, and add ".com" to the keyboard to match email input',
-**month:** 'allows the user to select a month and year',
-**search:** 's used for search fields (a search field behaves like a regular text field)',
-**tel:** 'is used for input fields that should contain a telephone number. Note: The tel type is currently only supported in Safari 8.',
-**url:** 'the url field can be automatically validated when submitted. Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input',
-**week:** 'allows the user to select a week and year',  
+## **HTML5 Input Types**
 
-#### graphic elements
+**number:** 'defines a numeric input field. You can also set restrictions on what numbers are accepted'.  
+**date:** 'is used for input fields that should contain a date'.  
+**time:** 'allows the user to select a time (no time zone)'.  
+**range:** 'defines a control for entering a number whose exact value is not important. Default range is 0 to 100. You can set restrictions on what numbers are accepted with the min, max, and step attributes:'.  
+**color:** 'is used for input fields that should contain a color. Depending on browser support, a color picker can show up in the input field.'.  
+**email:** 'the e-mail address can be automatically validated when submitted. Some smartphones recognize the email type, and add ".com" to the keyboard to match email input'.  
+**month:** 'allows the user to select a month and year'.  
+**search:** 's used for search fields (a search field behaves like a regular text field)'.  
+**tel:** 'is used for input fields that should contain a telephone number. Note: The tel type is currently only supported in Safari 8.'.  
+**url:** 'the url field can be automatically validated when submitted. Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input'.  
+**week:** 'allows the user to select a week and year'  
+
+## **graphic elements**
+
 **svg:** 'is a container for SVG graphics.',
 ```
 <svg width="100" height="100">
