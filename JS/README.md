@@ -4,6 +4,8 @@
 
 [Let declaration](#let-declaration)
 
+[Temporal dead zone](#Temporal-dead-zone)
+
 [Const declaration](#const-declaration)
 
 [Block scoped functions](#Block-scoped-functions)
@@ -11,6 +13,8 @@
 [Array includes](#Array-includes)
 
 [Padding a string](#Padding-a-string)
+
+[Object entries](#Object-entries)
 
 [Spread operator (...)](#Spread-operator)
 
@@ -66,10 +70,7 @@
 
 
 ## Arithmetic operator
-take numerical values (either literals or variables) as their operands and return a single numerical value
-
-<details>
-  <summary>Example</summary>
+Take numerical values (either literals or variables) as their operands and return a single numerical value
 
   * Addition(+)
     The addition operator produces the sum of numeric operands or string concatenation.
@@ -106,14 +107,9 @@ take numerical values (either literals or variables) as their operands and retur
     The decrement operator decrements (subtracts one from) its operand and returns a value.
     Operator: x-- or --x
 
-</details>
-
 ## let declaration
 
 The let statement declares a block scope local variable, optionally initializing it to a value.
-
-<details>
-  <summary>Example</summary>
 
 ```
 {
@@ -129,14 +125,22 @@ The let statement declares a block scope local variable, optionally initializing
 
 Reference: [let MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 
-</details>
+## Temporal dead zone
+
+Unlike variables declared with var, which will start with the value undefined, let variables are not initialized until their definition is evaluated. Accessing the variable before the initialization results in a ReferenceError.
+
+```
+function do_something() {
+  console.log(bar); // undefined
+  console.log(foo); // ReferenceError
+  var bar = 1;
+  let foo = 2;
+}
+```
 
 ## const declaration
 
 Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through reassignment, and it can't be redeclared.
-
-<details>
-  <summary>Example</summary>
 
 ```
 const number = 42;
@@ -153,15 +157,12 @@ console.log(number);    // expected output: 42
 ```
 
 Reference: [const MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-</details>
 
 ## Block scoped functions
 
 The foo() function is declared inside the { .. } block, So it's not available outside that block.
 But also note that it is "hoisted" within the block, as opposed to let declarations.
 
-<details>
-  <summary>Example</summary>
 
 ```
 {
@@ -174,15 +175,12 @@ But also note that it is "hoisted" within the block, as opposed to let declarati
 
 foo();    // ReferenceError
 ```
-</details>
 
 ## Array includes
 
 The includes() method determines whether an array includes a certain value among its entries,
 returning true or false as appropriate.
 
-<details>
-  <summary>Example</summary>
 
 ```
 const array1 = [1, 2, 3, 4, 5 ];
@@ -196,14 +194,10 @@ const text = "Array.prototype.includes()";
 console.log(text.includes('proto')); // expected output: true
 ```
 
-</details>
-
 ## Padding a string
 
 The padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start (left) of the current string.
 
-<details>
-  <summary>Example</summary>
 
 ```
   const fullNumber = '2034399002125581';
@@ -214,13 +208,8 @@ The padStart() method pads the current string with another string (multiple time
   // expected output: "************5581"
 ```
 
-</details>
-
 The padEnd() method pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end (right) of the current string.
 
-<details>
-  <summary>Example</summary>
-  
 ```
 const str1 = 'Breaded Mushrooms';
 
@@ -228,14 +217,9 @@ console.log(str1.padEnd(25, '.'));
 // expected output: "Breaded Mushrooms........"
 ```
 
-</details>
-
 ## Object entries
 
 The Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs
-
-<details>
-  <summary>Example</summary>
 
 ```
 // array like object
@@ -249,15 +233,9 @@ for (const [key, value] of Object.entries(obj)) {
 }
 ```
 
-</details>
-
-
 ## Spread operator
 
 When ... is used in front of an array it acts to "spread" it out into its individual values.
-
-<details>
-  <summary>Example</summary>
 
 ```
 {
@@ -275,14 +253,10 @@ When ... is used in front of an array it acts to "spread" it out into its indivi
   foo( 1, 2, 3, 4, 5 );
 }
 ```
-</details>
 
 ## Rest parameters
 
 The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
-
-<details>
-  <summary>Example</summary>
 
 ```
 //rest parameters
@@ -292,11 +266,8 @@ function foo(x, y, ...z) {
 //The ...z argument "gather the rest of the values (if any) into an array called z."
 foo( 1, 2, 3, 4, 5 );			// 1 2 [3,4,5]
 ```
-</details>
 
 ## Default parameters values
-<details>
-  <summary>Example</summary>
 
 ```
 //setting a default value for a function parameter
@@ -310,14 +281,10 @@ foo( 1, 2, 3, 4, 5 );			// 1 2 [3,4,5]
   foo(1, [1,2]);    //expected output: 1 [1,2] {value:0}
 }
 ```
-</details>
 
 ## Default value expressions
 
 Default values can be also a function call.
-
-<details>
-  <summary>Example</summary>
 
 ```
 {
@@ -338,14 +305,10 @@ Default values can be also a function call.
   test(10, {'language': 'JavaScript'}); //expected output: 10 {language: JavaScript}
 }
 ```
-</details>
 
 ## Destructuring
 
 ES6 introduces a new syntactic feature called destructuring
-
-<details>
-  <summary>Example</summary>
 
 ```
 //Destructuring array
@@ -377,11 +340,9 @@ const obj = {'languaje': 'JavaScript', 'version': 'ES6'};
   console.log(languaje, version);
 }
 ```
-</details>
 
 ## Object Property Assignment Pattern (renaming)
-<details>
-  <summary>Example</summary>
+
 
 ```
 allows you to assign a property to a different variable name
@@ -393,13 +354,11 @@ const obj = {'x': 'JavaScript', 'y': 'ES6'};
   console.log(languaje, version);   //expected output JavaScript ES6
 }
 ```
-</details>
+
 
 ## Object Literal Extensions
-Define a property that is the same name as a lexical identifier, you can shorten it from x: x to x
 
-<details>
-  <summary>Example</summary>
+Define a property that is the same name as a lexical identifier, you can shorten it from x: x to x
 
 ```
 {
@@ -421,14 +380,10 @@ Define a property that is the same name as a lexical identifier, you can shorten
   console.log(func.f2());   //expected output f2
 }
 ```
-</details>
 
 ## Template literals
 
 As you can see, we used the `..` around a series of characters, which are interpreted as a string literal, but any expressions of the form ${..} are parsed and evaluated inline immediately
-
-<details>
-  <summary>Example</summary>
 
 ```
 //general scope
@@ -448,14 +403,10 @@ this is ${name}!`;  //works as line-break
                             //                 this is JavaScript!
 }
 ```
-</details>
 
 ## Interpolated Expressions
 
 Any valid expression is allowed to appear inside ${..} in an interpolated string literal, including function calls
-
-<details>
-  <summary>Example</summary>
 
 ```
 //global scope
@@ -475,11 +426,7 @@ Any valid expression is allowed to appear inside ${..} in an interpolated string
 ```
 Warning: As a word of caution, be very careful about the readability of your code
 
-</details>
-
 ## Tagged Template Literals
-<details>
-  <summary>Example</summary>
 
 ```
 //global scope
@@ -497,14 +444,11 @@ Warning: As a word of caution, be very careful about the readability of your cod
                                 // [ "JavaScript" ]
 }
 ```
-</details>
 
 ## Arrow functions
 
 The arrow function definition consists of a parameter list (of zero or more parameters, and surrounding ( .. ) if there's not exactly one parameter), followed by the => marker, followed by a function body.
 
-<details>
-  <summary>Example</summary>
 
 ```
 //global scope
@@ -534,13 +478,10 @@ The arrow function definition consists of a parameter list (of zero or more para
   console.log( a );   //expected output: [2,4,6,8,10]
 }
 ```
-</details>
 
 ## for..of loops
 
 Let's compare for..of to for..in to illustrate the difference:
-<details>
-  <summary>Example</summary>
 
 ```
 //global scope
@@ -560,15 +501,11 @@ Let's compare for..of to for..in to illustrate the difference:
 ```
 
 for..in loops over the keys/indexes in the a array, while for..of loops over the values in a.
-</details>
 
 ## Symbols
 
  New primitive type has been added to JavaScript: the symbol.
  This is how to create a Symbol
-
- <details>
-   <summary>Example</summary>
 
  ```
  //global scope
@@ -581,11 +518,8 @@ for..in loops over the keys/indexes in the a array, while for..of loops over the
   console.log(sym.toString());    //expected output: Symbol(symbol description)
 }
 ```
-</details>
 
 ## Classes
-<details>
-  <summary>Example</summary>
 
 ```
 Classes are in fact "special functions"
@@ -606,7 +540,6 @@ Classes are in fact "special functions"
   console.log(f.x);   //expected output: 1
 }
 ```
-</details>
 
 ## Promises
 
@@ -614,9 +547,6 @@ Promises are not about replacing callbacks. Promises provide a trustable interme
 
 A Promise can only have one of two possible resolution outcomes: fulfilled or rejected, with an optional single value
 Promises can only be resolved (fulfillment or rejection) once.
-
-<details>
-  <summary>Example</summary>
 
 To construct a promise instance, use the Promise(..) constructor:
 
@@ -650,17 +580,12 @@ The Promise(..) constructor takes a single function (pr(..)), which is called im
 
 * If you call resolve(..) and pass another promise, this promise simply adopts the state -- whether immediate or eventual -- of the passed promise (either fulfillment or rejection)
 
-</details>
-
 ## Import & Export
 
 Import:
 The static import statement is used to import bindings which are exported by another module.
 
-<details>
-  <summary>Example</summary>
-
-* Syntax
+* Syntax  
 import defaultExport from "module-name";
 
 Export:
@@ -668,15 +593,10 @@ The export statement is used when creating JavaScript modules to export function
 
 export { name1, name2, …, nameN };
 
-</details>
-
 ## Prototype inheritance
 
 JavaScript objects have a link to a prototype object
 When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.
-
-<details>
-  <summary>Example</summary>
 
 ```
 //Prototype inheritance
@@ -697,7 +617,6 @@ When trying to access a property of an object, the property will not only be sou
   console.log(child.property3);   //Expected output: property3
 }
 ```
-</details>
 
 ## Mutable/Immutable
 
@@ -713,9 +632,6 @@ Immutable are the objects whose state cannot be changed once the object is creat
 ## Datatypes
 
 JavaScript is a loosely typed or a dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
-
-<details>
-  <summary>Example</summary>
 
 The latest ECMAScript standard defines seven data types:
 
@@ -778,16 +694,12 @@ The latest ECMAScript standard defines seven data types:
       console.log(typeof(o));   //expected output: object
     }
     ```
-</details>
 
 ## Closure
 
 A closure is the combination of a function and the lexical environment within which that function was declared.
 JavaScript variables can belong to the local or global scope.
 Global variables can be made local (private) with closures.
-
-<details>
-  <summary>Example</summary>
 
 ```
 {
@@ -811,12 +723,16 @@ The problem is any code on the page can change the counter, without calling add(
 ```
 {
   //block scope
+
   let add = (function () {
+
     let counter = 0;
+
     return function () {
       counter += 1;
       return counter;
     }
+
   })();   //self-invoking function
 
   console.log(add());   //Expected output: 1
@@ -829,16 +745,12 @@ The problem is any code on the page can change the counter, without calling add(
 Now counter is private, the scope belongs to add() function
 Counter can't be used from outside of the add scope
 
-</details>
-
 ## Generator
+
 Functions in JavaScript, as we all know, “run until return/end”.  
 Generator Functions on the other hand, “run until yield/return/end”.  
 Generator Functions once called, returns the Generator Object,  
 which holds the entire Generator Iterable that can be iterated using next() method or for…of loop.
-
-<details>
-  <summary>Example</summary>
 
 ```
 
@@ -858,16 +770,11 @@ console.log(idGenerator.next().value); //expected output: 2
 
 ```
 
-</details>
-
 ## Hoisting
 
 A strict definition of hoisting suggests that variable and function declarations are physically moved to the top of your code, but this is not in fact what happens. Instead, the variable and function declarations are put into memory during the compile phase, but stay exactly where you typed them in your code.
 
 One of the advantages of JavaScript putting function declarations into memory before it executes any code segment is that it allows you to use a function before you declare it in your code
-
-<details>
-  <summary>Example</summary>
 
 ```
 {
@@ -889,17 +796,12 @@ JavaScript only hoists declarations, not initializations. If a variable is decla
 }
 ```
 
-</details>
-
 ## this
 
 The JavaScript context object in which the current code is executing.
 
 In most cases, the value of this is determined by how a function is called.
 ES5 introduced the bind() method to set the value of a function's this regardless of how it's called, and ES2015 introduced arrow functions which don't provide their own this binding.
-
-<details>
-  <summary>Example</summary>
 
 ```
 {
@@ -917,14 +819,9 @@ ES5 introduced the bind() method to set the value of a function's this regardles
 }
 ```
 
-</details>
-
 ## try...catch
 
 The try...catch statement marks a block of statements to try, and specifies a response, should an exception be thrown.
-
-<details>
-  <summary>Example</summary>
 
 ```
 {
@@ -945,8 +842,6 @@ The try...catch statement marks a block of statements to try, and specifies a re
 }
 ```
 
-</details>
-
 ## async & await
 
 The async function declaration defines an asynchronous function.
@@ -958,9 +853,6 @@ A Promise which will be resolved with the value returned by the async function,
 or rejected with an uncaught exception thrown from within the async function.
 
 An async function can contain an await expression that pauses the execution of the async function and waits for the passed Promise's resolution, and then resumes the async function's execution and returns the resolved value.
-
-<details>
-  <summary>Example</summary>
 
   ```
   //create promise
@@ -984,14 +876,13 @@ An async function can contain an await expression that pauses the execution of t
 
   ```
 
-</details>
-
 ## suggestion
 
 * Syntax validation
 
-  Add jshint
-  Validate JavaScript with JSHint. In realtime or on save. Supports JSX (React).
-  add .jshintrc file at the root project with { "esversion": 6 }
+  Add jshint  
+  Validate JavaScript with JSHint. In realtime or on save. Supports JSX (React).  
+  add .jshintrc file at the root project with { "esversion": 6 }  
   for more configuration options check
+
   [jshint](https://jshint.com/docs/options/)
