@@ -54,7 +54,7 @@ Describes how HTML elements are displayed on screen, is used to define styles fo
 
 [Max-Width](#Max-Width)
 
-[CSS Layout - Property (position)](#CSS-Layout-Property-(position))
+[CSS Layout Position](#CSS-Layout-Position)
 
 [Overflow](#Overflow)
 
@@ -1278,7 +1278,7 @@ Using max-width, will improve the browser's handling of small windows. This is i
   }
   ```
 
-## **CSS Layout Property (position)**
+## **CSS Layout Position**
 
 The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
 
