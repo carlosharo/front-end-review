@@ -9,6 +9,8 @@ The term represents two different concepts. It is a new version of the language 
 
 [Document structure](#Document structure)
 
+[Text formatting](#Text formatting)
+
 ## **Document summary**
 
 **html:** Beginning and end of and HTML document.  
@@ -61,6 +63,7 @@ The term represents two different concepts. It is a new version of the language 
 **br :** 'Crates a line break useful to for writing blocks of text that need to be on different lines.'  
 **hr :** 'Create a horizontal rule, a sectional break in an HTML page. Typically used to denote a change in topic or section of a page.'
 
+**Code example**
 ```
 <div className="result">
   <h3> Lorem ipsum </h3>
@@ -76,7 +79,7 @@ The term represents two different concepts. It is a new version of the language 
   </p>
 </div>
 ```
-
+**View**
 <div className="result">
   <h3> Lorem ipsum </h3>
   <p>
@@ -91,7 +94,7 @@ The term represents two different concepts. It is a new version of the language 
   </p>
 </div>
 
-## **Text + formatting**
+## **Text formatting**
 
 **strong :** 'Indicates STROG emphasis, displayed bold in most browsers'  
 **b :** 'Another way to create bold text, it is more for drawing attention'  
@@ -110,6 +113,7 @@ The term represents two different concepts. It is a new version of the language 
 **sub :** 'Subscript text a helpful way to subscript text'  
 **small :** 'Small size text Historically used to simply reduce text size, in HTML5 it also refers to information that may no longer be valid'  
 
+**Code example**
 ```
 <div className="result">
   <p>
@@ -128,6 +132,24 @@ The term represents two different concepts. It is a new version of the language 
   </p>
 </div>
 ```
+
+**View**
+<div className="result">
+  <p>
+  <strong>Aenean tempus finibus tristique.</strong>
+  Duis lorem urna, <em>tincidunt et posuere nec</em>, <i>euismod pellentesque tortor</i>.
+  <blockquote>
+  Curabitur pulvinar, elit sit amet interdum sagittis, tellus nibh dictum turpis, a <b>rutrum tellus massa et dolor</b>.
+  </blockquote>
+  <cite>- Fusce aliquam tortor eget ex pharetra, ac malesuada lorem luctus.</cite>
+  <br />
+  <pre>Vivamus sit amet tempor nisl, sit amet dapibus nulla.</pre>
+  <q>Morbi fermentum eleifend odio</q>,<address>ut pulvinar massa interdum in.</address>
+  <ins>Etiam vel augue cursus</ins>, <small>porta ipsum sit amet, tristique erat.</small>
+  <code>Ut vitae molestie arcu.</code>
+  <del>In hac habitasse platea dictumst.</del>
+  </p>
+</div>
 
 * Links + formatting
 
