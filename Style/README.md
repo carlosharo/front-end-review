@@ -16,6 +16,8 @@ Describes how HTML elements are displayed on screen, is used to define styles fo
 
 [Pseudo-Elements](#Pseudo-Elements)
 
+[Specificity](Specificity)
+
 [CSS Units](#CSS-Units)
 
 [Comments](#Comments)
@@ -453,6 +455,20 @@ Relative length units are relative to something else, perhaps the size of the pa
   </tr>
  </tbody>
 </table>
+
+## **Specificity**
+
+CSS Specificity is the set of the rules applied to CSS selectors in order to determine which style is applied to an element.
+
+When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element.
+
+Specificity only applies when the same element is targeted by multiple declarations.
+
+1. Type selectors (e.g., h1) and pseudo-elements (e.g., ::before).  
+2. Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).  
+3. ID selectors (e.g., #example).  
+
+When an important rule is used on a style declaration, this declaration overrides any other declarations. Although technically !important has nothing to do with specificity, it interacts directly with it.
 
 ## **Comments**
 
