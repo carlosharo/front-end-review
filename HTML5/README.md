@@ -17,7 +17,19 @@ The term represents two different concepts. It is a new version of the language 
 
 [HTML5 Input Types](#HTML5 Input Types)
 
-[graphic elements](#graphic elements)
+[Graphic elements](#Graphic elements)
+
+[multimedia elements](#multimedia elements)
+
+[HTML5 API](#HTML5 API)
+
+[Drag and Drop](#Drag and Drop)
+
+[Local Storage](#Local Storage)
+
+[Web Workers](#Web Workers)
+
+[WebSockets](#WebSockets)
 
 ## **Document summary**
 
@@ -231,7 +243,7 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
 **url:** 'the url field can be automatically validated when submitted. Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input'.  
 **week:** 'allows the user to select a week and year'  
 
-## **graphic elements**
+## **Graphic elements**
 
 **svg:** 'is a container for SVG graphics.',
 ```
@@ -239,16 +251,19 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
 ```  
-**canvas:** 'is used to draw graphics, on the fly, via JavaScript. A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.',
+
+**canvas:** 'is used to draw graphics, on the fly, via JavaScript. A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.'.
 ```
 <canvas id="myCanvas" width="200" height="100"></canvas>
 ```
+
 **diferences:** 'SVG is a language for describing 2D graphics in XML & Canvas draws 2D graphics, on the fly (with a JavaScript)',
 
-#### multimedia elements
-**audio:**  specifies a standard way to embed audio in a web page.
-**controls:** attribute adds audio controls, like play, pause, and volume.
-**source:** element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+## **multimedia elements**
+
+**audio:**  specifies a standard way to embed audio in a web page.  
+**controls:** attribute adds audio controls, like play, pause, and volume.  
+**source:** element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.  
 **note:**
   - The text between the 'audio' tags will only be displayed in browsers that do not support the <audio> element.
   - In HTML5, there are 3 supported audio formats: MP3, WAV, and OGG.
@@ -260,13 +275,14 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
   </audio>
   ```
 
-**video:** specifies a standard way to embed a video in a web page.
-**controls:** attribute adds video controls, like play, pause, and volume.
-The source element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.
+**video:** specifies a standard way to embed a video in a web page.  
+**controls:** attribute adds video controls, like play, pause, and volume.  
+The source element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.  
 **note:**
-  - The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
+  - The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.  
 
-#### HTML5 API (Application Programming Interfaces)
+## **HTML5 API**
+
 **Geolocation:** 'is used to get the geographical position of a user. Since this can compromise privacy, the position is not available unless the user approves it.'.
 
 The **getCurrentPosition()** method is used to return the user's position.
@@ -306,10 +322,11 @@ function errorCallBack(error){
 
 ```
 
-**Drag and Drop:**  
-DnD: 'Drag and Drop (DnD) is powerful User Interface concept which makes it easy to copy, reorder and deletion of items with the help of mouse clicks.',
+## **Drag and Drop**  
 
-* First of all: To make an element draggable, set the draggable attribute to true:
+DnD: 'Drag and Drop (DnD) is powerful User Interface concept which makes it easy to copy, reorder and deletion of items with the help of mouse clicks.'.
+
+* First of all: To make an element draggable, set the draggable attribute to true.
 ```
 <img draggable="true">
 ```
@@ -332,7 +349,7 @@ function drop(ev) {
 }
 ```
 
-**Local Storage:**  
+## **Local Storage**  
 
 The Session Storage is designed for scenarios where the user is carrying out a single transaction, but could be carrying out multiple transactions in different windows at the same time.
 
@@ -350,7 +367,8 @@ if (typeof(Storage) !== "undefined") {
 }
 ```
 
-**Web Workers:**  
+## **Web Workers**
+
 Web Workers allow for long-running scripts that are not interrupted by scripts that respond to clicks or other user interactions.
 When a script is executing inside a Web Worker it cannot access the web page's window object (window.document), which means that Web Workers don't have direct access to the web page and the DOM API.
 
@@ -383,7 +401,8 @@ worker.addEventListener('message', function(e) {
 ```
 
 
-**WebSockets**
+## **WebSockets**
+
 Is a bidirectional communication technology for web applications which operates over a single socket and is exposed via a JavaScript interface in HTML 5 compliant browsers.  
 
 Once you get a Web Socket connection with the web server, you can send data from browser to server by calling a send() method, and receive data from server to browser by an onmessage event handler.
@@ -391,19 +410,20 @@ Once you get a Web Socket connection with the web server, you can send data from
 ```
 var Socket = new WebSocket(url, [protocal] );
 ```
+
 The url, specifies the URL to which to connect. The second attribute, protocol is optional, and if present, specifies a sub-protocol that the server must support for the connection to be successful.
 
 * Events
-open	   Socket.onopen:  	  This event occurs when socket connection is established.
-message	 Socket.onmessage:	This event occurs when client receives data from server.
-error	   Socket.onerror:  	This event occurs when there is any error in communication.
-close	   Socket.onclose:  	This event occurs when connection is closed.
+open	   Socket.onopen:  	  This event occurs when socket connection is established.  
+message	 Socket.onmessage:	This event occurs when client receives data from server.  
+error	   Socket.onerror:  	This event occurs when there is any error in communication.  
+close	   Socket.onclose:  	This event occurs when connection is closed.  
 
 * Methods
-Socket.send()
+Socket.send()  
 The send(data) method transmits data using the connection.
 
-Socket.close()
+Socket.close()  
 The close() method would be used to terminate any existing connection.
 
 #### others
