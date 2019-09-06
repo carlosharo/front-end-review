@@ -11,6 +11,8 @@ The term represents two different concepts. It is a new version of the language 
 
 [Text formatting](#Text formatting)
 
+[Links formatting](#Links formatting)
+
 ## **Document summary**
 
 **html:** Beginning and end of and HTML document.  
@@ -151,7 +153,7 @@ The term represents two different concepts. It is a new version of the language 
   </p>
 </div>
 
-* Links + formatting
+## **Links formatting**
 
 **href:** 'anchor text for hyperlink'  
 **mailto:** 'A link used to pull up an outgoing message to a specific email addresses'  
@@ -170,6 +172,16 @@ The term represents two different concepts. It is a new version of the language 
 
 </div>
 ```
+
+<div className="result">
+
+  <a href="example">hyperlink </a> {html5.href} <br/>
+  <a href="mailto:">mailto</a> {html5.mailto} <br/>
+  <a href="tel://###-###">tel</a> {html5.tel} <br/>
+  <a href="name">name</a> {html5.name} <br/>
+  <a href="#structure">Document structure</a> {html5.tagname} <br/>
+
+</div>
 
 * Images + formatting
 * Lists + formatting
