@@ -3,7 +3,35 @@
 ## HTML5 is the latest evolution of the standard that defines HTML.
 The term represents two different concepts. It is a new version of the language HTML, with new elements, attributes, and behaviors, and a larger set of technologies that allows the building of more diverse and powerful Web sites and applications.
 
-* Document summary
+[Document summary](#Document-summary)
+
+[Document information](#Document-information)
+
+[Document structure](#Document-structure)
+
+[Text formatting](#Text-formatting)
+
+[Links formatting](#Links-formatting)
+
+[HTML5 New Tags](#HTML5-New-Tags)
+
+[HTML5 Input Types](#HTML5-Input-Types)
+
+[Graphic elements](#Graphic-elements)
+
+[multimedia elements](#multimedia-elements)
+
+[HTML5 API](#HTML5-API)
+
+[Drag and Drop](#Drag-and-Drop)
+
+[Local Storage](#Local-Storage)
+
+[Web Workers](#Web-Workers)
+
+[Web Sockets](#Web-Sockets)
+
+## **Document summary**
 
 **html:** Beginning and end of and HTML document.  
 **head:** Contains information that specific the page(tags, meta data, links to scripts and styles).  
@@ -21,7 +49,7 @@ The term represents two different concepts. It is a new version of the language 
 </html>
 ```
 
-* Document information
+## **Document information**
 
 **base :** The base URL is useful for specifying all relative links in a document.  
 **meta :** Meta data spells out additional information about the page () description, author, published date, keyword).  
@@ -47,8 +75,7 @@ The term represents two different concepts. It is a new version of the language 
 </html>
 ```
 
-(see App for live examples)
-* Document structure
+## **Document structure**
 
 **h1 to h6 :** 'All six leaves of Headings, with 1 being the most important on a page and 6 being the least. These elements are used to describe content sections on a page.'  
 **span :** 'An inline section or block container, typically used for grouping styling elements'  
@@ -56,6 +83,7 @@ The term represents two different concepts. It is a new version of the language 
 **br :** 'Crates a line break useful to for writing blocks of text that need to be on different lines.'  
 **hr :** 'Create a horizontal rule, a sectional break in an HTML page. Typically used to denote a change in topic or section of a page.'
 
+**Code example**
 ```
 <div className="result">
   <h3> Lorem ipsum </h3>
@@ -71,7 +99,22 @@ The term represents two different concepts. It is a new version of the language 
   </p>
 </div>
 ```
-* Text + formatting
+**View**
+<div className="result">
+  <h3> Lorem ipsum </h3>
+  <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+  Pellentesque volutpat congue velit. <br />
+  Ut maximus diam at nunc auctor, id rutrum nisl tincidunt. <br />
+  <hr />
+  Cras sed erat sed risus fringilla sagittis. <br />
+  Maecenas <span>quis arcu turpis.</span> <br />
+  In pellentesque eget augue nec lacinia. <br />
+  Phasellus vel justo volutpat, sollicitudin purus et, volutpat felis. <br />
+  </p>
+</div>
+
+## **Text formatting**
 
 **strong :** 'Indicates STROG emphasis, displayed bold in most browsers'  
 **b :** 'Another way to create bold text, it is more for drawing attention'  
@@ -90,6 +133,7 @@ The term represents two different concepts. It is a new version of the language 
 **sub :** 'Subscript text a helpful way to subscript text'  
 **small :** 'Small size text Historically used to simply reduce text size, in HTML5 it also refers to information that may no longer be valid'  
 
+**Code example**
 ```
 <div className="result">
   <p>
@@ -109,7 +153,25 @@ The term represents two different concepts. It is a new version of the language 
 </div>
 ```
 
-* Links + formatting
+**View**
+<div className="result">
+  <p>
+  <strong>Aenean tempus finibus tristique.</strong>
+  Duis lorem urna, <em>tincidunt et posuere nec</em>, <i>euismod pellentesque tortor</i>.
+  <blockquote>
+  Curabitur pulvinar, elit sit amet interdum sagittis, tellus nibh dictum turpis, a <b>rutrum tellus massa et dolor</b>.
+  </blockquote>
+  <cite>- Fusce aliquam tortor eget ex pharetra, ac malesuada lorem luctus.</cite>
+  <br />
+  <pre>Vivamus sit amet tempor nisl, sit amet dapibus nulla.</pre>
+  <q>Morbi fermentum eleifend odio</q>,<address>ut pulvinar massa interdum in.</address>
+  <ins>Etiam vel augue cursus</ins>, <small>porta ipsum sit amet, tristique erat.</small>
+  <code>Ut vitae molestie arcu.</code>
+  <del>In hac habitasse platea dictumst.</del>
+  </p>
+</div>
+
+## **Links formatting**
 
 **href:** 'anchor text for hyperlink'  
 **mailto:** 'A link used to pull up an outgoing message to a specific email addresses'  
@@ -117,24 +179,37 @@ The term represents two different concepts. It is a new version of the language 
 **name:** 'An anchor thats useful for bringing users to specific document elements'  
 #name: 'An anchor link that brings users specifically to a div element'  
 
+**Code example**
 ```
 <div className="result">
 
-  <a href="example">hyperlink </a> {html5.href} <br/>
-  <a href="mailto:">mailto</a> {html5.mailto} <br/>
-  <a href="tel://###-###">tel</a> {html5.tel} <br/>
-  <a href="name">name</a> {html5.name} <br/>
-  <a href="#structure">Document structure</a> {html5.tagname} <br/>
+  <a href="example">hyperlink </a> <br/>
+  <a href="mailto:">mailto</a> <br/>
+  <a href="tel://###-###">tel</a> <br/>
+  <a href="name">name</a> <br/>
+  <a href="#structure">Document structure</a> <br/>
 
 </div>
 ```
+
+**View**
+<div className="result">
+
+  <a href="example">hyperlink </a> <br/>
+  <a href="mailto:">mailto</a> <br/>
+  <a href="tel:">tel</a> <br/>
+  <a href="name">name</a> <br/>
+  <a href="#structure">Document structure</a> <br/>
+
+</div>
 
 * Images + formatting
 * Lists + formatting
 * Forms
 * Tables
 * Objects & iFrames
-* HTML5 New Tags
+
+## **HTML5 New Tags**
 
 #### Semantic elements:
 A semantic element clearly describes its meaning to both the browser and the developer.  
@@ -154,36 +229,41 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
 **summary:** 'Contains a visible heading for a 'details' element'  
 **time:** 'Identifies the time and date'  
 
-#### HTML5 Input Types
-**number:** 'defines a numeric input field. You can also set restrictions on what numbers are accepted',
-**date:** 'is used for input fields that should contain a date',
-**time:** 'allows the user to select a time (no time zone)',
-**range:** 'defines a control for entering a number whose exact value is not important. Default range is 0 to 100. You can set restrictions on what numbers are accepted with the min, max, and step attributes:',
-**color:** 'is used for input fields that should contain a color. Depending on browser support, a color picker can show up in the input field.',
-**email:** 'the e-mail address can be automatically validated when submitted. Some smartphones recognize the email type, and add ".com" to the keyboard to match email input',
-**month:** 'allows the user to select a month and year',
-**search:** 's used for search fields (a search field behaves like a regular text field)',
-**tel:** 'is used for input fields that should contain a telephone number. Note: The tel type is currently only supported in Safari 8.',
-**url:** 'the url field can be automatically validated when submitted. Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input',
-**week:** 'allows the user to select a week and year',  
+## **HTML5 Input Types**
 
-#### graphic elements
+**number:** 'defines a numeric input field. You can also set restrictions on what numbers are accepted'.  
+**date:** 'is used for input fields that should contain a date'.  
+**time:** 'allows the user to select a time (no time zone)'.  
+**range:** 'defines a control for entering a number whose exact value is not important. Default range is 0 to 100. You can set restrictions on what numbers are accepted with the min, max, and step attributes:'.  
+**color:** 'is used for input fields that should contain a color. Depending on browser support, a color picker can show up in the input field.'.  
+**email:** 'the e-mail address can be automatically validated when submitted. Some smartphones recognize the email type, and add ".com" to the keyboard to match email input'.  
+**month:** 'allows the user to select a month and year'.  
+**search:** 's used for search fields (a search field behaves like a regular text field)'.  
+**tel:** 'is used for input fields that should contain a telephone number. Note: The tel type is currently only supported in Safari 8.'.  
+**url:** 'the url field can be automatically validated when submitted. Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input'.  
+**week:** 'allows the user to select a week and year'  
+
+## **Graphic elements**
+
 **svg:** 'is a container for SVG graphics.',
 ```
 <svg width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
 ```  
-**canvas:** 'is used to draw graphics, on the fly, via JavaScript. A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.',
+
+**canvas:** 'is used to draw graphics, on the fly, via JavaScript. A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.'.
 ```
 <canvas id="myCanvas" width="200" height="100"></canvas>
 ```
+
 **diferences:** 'SVG is a language for describing 2D graphics in XML & Canvas draws 2D graphics, on the fly (with a JavaScript)',
 
-#### multimedia elements
-**audio:**  specifies a standard way to embed audio in a web page.
-**controls:** attribute adds audio controls, like play, pause, and volume.
-**source:** element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+## **multimedia elements**
+
+**audio:**  specifies a standard way to embed audio in a web page.  
+**controls:** attribute adds audio controls, like play, pause, and volume.  
+**source:** element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.  
 **note:**
   - The text between the 'audio' tags will only be displayed in browsers that do not support the <audio> element.
   - In HTML5, there are 3 supported audio formats: MP3, WAV, and OGG.
@@ -195,13 +275,14 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
   </audio>
   ```
 
-**video:** specifies a standard way to embed a video in a web page.
-**controls:** attribute adds video controls, like play, pause, and volume.
-The source element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.
+**video:** specifies a standard way to embed a video in a web page.  
+**controls:** attribute adds video controls, like play, pause, and volume.  
+The source element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.  
 **note:**
-  - The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
+  - The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.  
 
-#### HTML5 API (Application Programming Interfaces)
+## **HTML5 API**
+
 **Geolocation:** 'is used to get the geographical position of a user. Since this can compromise privacy, the position is not available unless the user approves it.'.
 
 The **getCurrentPosition()** method is used to return the user's position.
@@ -241,10 +322,11 @@ function errorCallBack(error){
 
 ```
 
-**Drag and Drop:**  
-DnD: 'Drag and Drop (DnD) is powerful User Interface concept which makes it easy to copy, reorder and deletion of items with the help of mouse clicks.',
+## **Drag and Drop**  
 
-* First of all: To make an element draggable, set the draggable attribute to true:
+DnD: 'Drag and Drop (DnD) is powerful User Interface concept which makes it easy to copy, reorder and deletion of items with the help of mouse clicks.'.
+
+* First of all: To make an element draggable, set the draggable attribute to true.
 ```
 <img draggable="true">
 ```
@@ -267,7 +349,7 @@ function drop(ev) {
 }
 ```
 
-**Local Storage:**  
+## **Local Storage**  
 
 The Session Storage is designed for scenarios where the user is carrying out a single transaction, but could be carrying out multiple transactions in different windows at the same time.
 
@@ -285,7 +367,8 @@ if (typeof(Storage) !== "undefined") {
 }
 ```
 
-**Web Workers:**  
+## **Web Workers**
+
 Web Workers allow for long-running scripts that are not interrupted by scripts that respond to clicks or other user interactions.
 When a script is executing inside a Web Worker it cannot access the web page's window object (window.document), which means that Web Workers don't have direct access to the web page and the DOM API.
 
@@ -318,7 +401,8 @@ worker.addEventListener('message', function(e) {
 ```
 
 
-**WebSockets**
+## **Web Sockets**
+
 Is a bidirectional communication technology for web applications which operates over a single socket and is exposed via a JavaScript interface in HTML 5 compliant browsers.  
 
 Once you get a Web Socket connection with the web server, you can send data from browser to server by calling a send() method, and receive data from server to browser by an onmessage event handler.
@@ -326,19 +410,20 @@ Once you get a Web Socket connection with the web server, you can send data from
 ```
 var Socket = new WebSocket(url, [protocal] );
 ```
+
 The url, specifies the URL to which to connect. The second attribute, protocol is optional, and if present, specifies a sub-protocol that the server must support for the connection to be successful.
 
 * Events
-open	   Socket.onopen:  	  This event occurs when socket connection is established.
-message	 Socket.onmessage:	This event occurs when client receives data from server.
-error	   Socket.onerror:  	This event occurs when there is any error in communication.
-close	   Socket.onclose:  	This event occurs when connection is closed.
+open	   Socket.onopen:  	  This event occurs when socket connection is established.  
+message	 Socket.onmessage:	This event occurs when client receives data from server.  
+error	   Socket.onerror:  	This event occurs when there is any error in communication.  
+close	   Socket.onclose:  	This event occurs when connection is closed.  
 
 * Methods
-Socket.send()
+Socket.send()  
 The send(data) method transmits data using the connection.
 
-Socket.close()
+Socket.close()  
 The close() method would be used to terminate any existing connection.
 
 #### others
