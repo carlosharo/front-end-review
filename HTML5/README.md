@@ -3,33 +3,33 @@
 ## HTML5 is the latest evolution of the standard that defines HTML.
 The term represents two different concepts. It is a new version of the language HTML, with new elements, attributes, and behaviors, and a larger set of technologies that allows the building of more diverse and powerful Web sites and applications.
 
-[Document summary](#Document summary)
+[Document summary](#Document-summary)
 
-[Document information](#Document information)
+[Document information](#Document-information)
 
-[Document structure](#Document structure)
+[Document structure](#Document-structure)
 
-[Text formatting](#Text formatting)
+[Text formatting](#Text-formatting)
 
-[Links formatting](#Links formatting)
+[Links formatting](#Links-formatting)
 
-[HTML5 New Tags](#HTML5 New Tags)
+[HTML5 New Tags](#HTML5-New-Tags)
 
-[HTML5 Input Types](#HTML5 Input Types)
+[HTML5 Input Types](#HTML5-Input-Types)
 
-[Graphic elements](#Graphic elements)
+[Graphic elements](#Graphic-elements)
 
-[multimedia elements](#multimedia elements)
+[multimedia elements](#multimedia-elements)
 
-[HTML5 API](#HTML5 API)
+[HTML5 API](#HTML5-API)
 
-[Drag and Drop](#Drag and Drop)
+[Drag and Drop](#Drag-and-Drop)
 
-[Local Storage](#Local Storage)
+[Local Storage](#Local-Storage)
 
-[Web Workers](#Web Workers)
+[Web Workers](#Web-Workers)
 
-[WebSockets](#WebSockets)
+[Web Sockets](#Web-Sockets)
 
 ## **Document summary**
 
@@ -401,7 +401,7 @@ worker.addEventListener('message', function(e) {
 ```
 
 
-## **WebSockets**
+## **Web Sockets**
 
 Is a bidirectional communication technology for web applications which operates over a single socket and is exposed via a JavaScript interface in HTML 5 compliant browsers.  
 
