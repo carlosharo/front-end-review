@@ -1,5 +1,5 @@
 /**
- * [Depth First Search (DFS)] - Inorder Traversal: Get the value from right then from left 
+ * [Depth First Search (DFS)] - Postorder Traversal: Get the value from right then from left 
  *
  * Visit the root
  * Visit all the left nodes as far as possible 
