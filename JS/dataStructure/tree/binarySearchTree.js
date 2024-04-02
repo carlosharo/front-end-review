@@ -12,7 +12,7 @@
  *  [Breadth First Search (BFS)]
  */
 
-import { dfsPreOrder as DFSPreorder } from './DFSPreorder.js';
+import { dfsPreOrder as DFSPreorder } from './dfsPreorder.js';
 import { dfsInOrder as DFSInOrder } from './dfsInorder.js';
 import { dfsPostOrder as DFSPostOrder} from './dfsPostorder.js';
 import { bfsTraversal as BFSTraversal } from './bfsTraversal.js';
