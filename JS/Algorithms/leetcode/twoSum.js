@@ -23,10 +23,8 @@ const CASE_THREE = {
 
 var twoSum = function({nums, target}) {
     let numsMap = {};
-
      for (let x = 0; x < nums.length; x++) {
         const index = numsMap[target - nums[x]];
-        console.log('Map: ', numsMap, index)
         if(index !== undefined){
             return[index, x];
         }
