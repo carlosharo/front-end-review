@@ -56,8 +56,6 @@ The Promise API also provides some static methods for working with Promises.
     //will tranform the data after the promise is returned
     console.log(...result.map(value => `item#${value}`));   //expected output: item#1 item#2 item#3 item#4 item#5 item#6 item#7
   });
-  
-}
 
 
 /*
@@ -72,7 +70,14 @@ Methods
 Promise.all()
 Returns a promise that either fulfills when all of the promises in the iterable argument have fulfilled or
 rejects as soon as one of the promises in the iterable argument rejects.
+*/
+Promise.all([promise1, promise2]).then((resolve) => {
+  console.log('Promise all - resolved: ', resolve);
+}, (reject) => {
+  console.log('Promise all - rejected: ', reject); // Promise all - rejected:  Error
+})
 
+/*
 Promise.race()
 Returns a promise that fulfills or rejects as soon as one of the promises in the iterable fulfills or rejects,
 with the value or reason from that promise.
@@ -82,3 +87,5 @@ Promise prototype
 Promise.prototype.finally()
 Appends a handler to the promise, and returns a new promise which is resolved when the original promise is resolved
 */
+
+}
