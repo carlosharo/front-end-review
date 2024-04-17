@@ -1,6 +1,6 @@
 # JavaScript Review
 
-## Usefull data sources for data structures and algorithms
+## Sources
 [data-structures+](https://www.youtube.com/@Codevolution)
 
 ## Menu
@@ -67,6 +67,70 @@
 [async & await](#asyasync-&-awaitnc)
 
 [suggestion](#suggestion)
+
+## Hooks
+
+useCallback: is a React Hook that lets you cache a function definition between re-renders.
+useMemo: is a React Hook that lets you cache the result of a calculation between re-renders.
+memo: Wrap a component in memo to get a memoized version of that component. This memoized version of your component will usually not be re-rendered when its parent component is re-rendered as long as its props have not changed.
+
+<details>
+  <summary>Example</summary>
+
+```
+const ParentComponent = () => {
+
+  const [count, setCount] = useState(0);
+  const [theme, setTheme] = useState('light');
+  const limit = 1000000;
+
+  const list = useMemo(()=> {
+    let count = 0;
+    const list = [];
+    while(count < limit){
+      list.push(<div>{`Element No: ${count}`}</div>)
+    }
+    return list;
+  },[limit])
+
+  const handleCount = useCallback( () => {
+    setCount(count + 1);
+  }, [count]);
+
+  return(
+    <div className={theme}>
+      <Header title={'header title'}/>
+      <ChildComponent handleCount={handleCount} count={count}/>
+      <button onClick={setTheme(theme === 'light' ? 'dark' : 'light')}>Change theme</button>
+      <div>{list}</div>
+      <Footer disclaimer={disclaimer}/>
+    </div>
+  );
+}
+
+// memo will memoize the component to avoid re-rendering if title has not changed
+const Header = memo((title)=> {
+  return <div>{title}</div>
+});
+
+
+// memo will memoize the component to avoid re-rendering if count has not changed
+// it is required to use useCallback to memoize the function in the paren component
+const ChildComponent = memo((count, handleCount)=> {
+  return(
+    <div>`Count: ${count}`</div>
+    <button onClick={handleCount}>Increase</button>
+  );
+});
+
+// memo will memoize the component to avoid re-rendering if title has not changed
+const Footer = memo((disclaimer)=> {
+  return <div>{disclaimer}</div>
+});
+
+
+```
+</details>
 
 
 ## Arithmetic operator
