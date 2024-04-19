@@ -4,6 +4,10 @@
 [data-structures+](https://www.youtube.com/@Codevolution)
 
 ## Menu
+[Event loop](#Event-loop)
+
+[Hooks](#Hooks)
+
 [Arithmetic operator](#Arithmetic-operator)
 
 [Let declaration](#let-declaration)
@@ -67,6 +71,10 @@
 [async & await](#asyasync-&-awaitnc)
 
 [suggestion](#suggestion)
+
+## Event Loop
+
+In JavaScript, the event loop is a fundamental mechanism that enables the asynchronous execution of code. It’s an essential part of the JavaScript runtime environment, allowing the language to handle non-blocking operations efficiently. The event loop is responsible for managing the execution of code, handling events, and maintaining the flow of control.
 
 ## Hooks
 
