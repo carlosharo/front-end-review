@@ -1,4 +1,4 @@
-function Grapqh() {
+export function Graph() {
     this.adjacencyList = {};
     this.addVertex = addVertex;
     this.addEdge = addEdge;
@@ -36,12 +36,11 @@ function Grapqh() {
     }
 }
 
-const graph = new Grapqh();
+const graph = new Graph();
 graph.addVertex("A");
 graph.addVertex("B");
 graph.addVertex("C");
 
 graph.addEdge("A", "B");
 graph.addEdge("B", "C");
-
 console.log(graph.adjacencyList);
